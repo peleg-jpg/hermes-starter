@@ -1,0 +1,17 @@
+# Never commit real secrets or live brain state.
+*.env
+.env
+.env.*
+!templates/env.example
+# Per-brain runtime data (created on the VPS, never tracked here).
+data/
+homelab/
+# Local build clone of the hermes-agent source.
+.hermes/
+hermes-agent/
+# OS / editor junk.
+.DS_Store
+*.pyc
+__pycache__/
+.venv/
+node_modules/

@@ -1,0 +1,14 @@
+hermes-starter
+================
+Reproducible finance-focused Hermes brain for a fresh VPS. No personal data.
+
+base_image:        hermes-wa:local
+image_source:      https://github.com/NousResearch/hermes-agent
+image_pinned_sha:  4e6d05c6a51e4461af0d0d51e79e3c6afe3f7b9a   # 2026-06-14
+image_extras:      all messaging anthropic bedrock azure-identity hindsight matrix
+seed_captured_from: a live Hermes /opt/data (finance skills + config only)
+seed_captured_utc:  2026-06-21
+seed_skills:        55 finance only (DCF, LBO, comps, merger, IC memo, KYC, ...)
+features_baked:     finance skills (55), image-analysis (image_input_mode=auto +
+                    auxiliary.vision), transcription (stt whisper-1), MCP (apify)
+personal_data:      none (no soul, accounts, names, tokens, or chat ids)
