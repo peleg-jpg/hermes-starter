@@ -276,7 +276,7 @@ auxiliary:
     extra_body: {}
 display:
   compact: false
-  personality: kawaii
+  personality: concise
   resume_display: full
   resume_exchanges: 10
   resume_max_user_chars: 300
@@ -316,6 +316,19 @@ display:
       streaming: true
     discord:
       streaming: false
+    # WhatsApp is a phone inbox: keep it quiet. The global display.tool_progress
+    # below is "all" (great for the CLI), but on WhatsApp that means every shell
+    # command the agent runs gets posted to the chat in English - the #1 "why is
+    # it spamming me terminal commands" complaint. Turn it off here. The agent
+    # still sends its own short "on it" line + the final answer
+    # (interim_assistant_messages stays on); it just drops the play-by-play, the
+    # token streaming, and the English system heartbeats.
+    whatsapp:
+      tool_progress: "off"
+      interim_assistant_messages: true
+      busy_ack_detail: false
+      streaming: false
+      long_running_notifications: false
   runtime_footer:
     enabled: false
     fields:

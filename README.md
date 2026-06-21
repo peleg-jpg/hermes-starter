@@ -62,6 +62,40 @@ nano ~/homelab/finbrain/data/SOUL.md  # give the brain its real role + voice
 opens chat. `finbrain setup`, `finbrain gateway run`, etc. all pass through to
 the in-container `hermes` CLI.
 
+## Linking WhatsApp
+
+The runtime is `hermes-wa` - WhatsApp is a first-class channel. Link it like
+this, and you sidestep the two traps that bite people:
+
+```bash
+# 1. BEFORE linking, tell the brain who may message it. Edit the brain .env:
+#      WHATSAPP_MODE=bot                       # a separate number people text (default)
+#      WHATSAPP_ALLOWED_USERS=972501234567     # the SENDER's number, NOT the agent's
+nano ~/homelab/<brain>/.env
+
+# 2. Link in a REAL terminal - this prints a LIVE, auto-refreshing QR:
+<brain> whatsapp            # or: ./lib/whatsapp-link.sh <brain>
+```
+
+Scan with the phone that should BE the bot (the number that receives messages
+and replies). Then text it from an allowed sender's phone.
+
+**Trap 1 - don't ask the chat agent to "print the QR."** The QR rotates every
+~20s; by the time the model relays it, it's expired and WhatsApp says "couldn't
+link device." Always use `<brain> whatsapp` directly. Over SSH, if the terminal
+QR won't scan, open `~/homelab/<brain>/data/whatsapp/session/latest-qr.png` -
+the bridge rewrites it on every refresh, so it's always the current code.
+
+**Trap 2 - agent number is not the sender number.** The number you SCAN with is
+the agent (it receives + replies). `WHATSAPP_ALLOWED_USERS` is the OTHER side -
+the people allowed to message it. Putting the agent's own number there, or
+leaving `WHATSAPP_MODE=self-chat` (which only answers your own "Note to Self"),
+silently drops every incoming message.
+
+WhatsApp ships **quiet**: the brain won't post the shell commands it runs (that
+noise is CLI-only) - it sends a short "on it" line, then the answer. Tune it
+under `display.platforms.whatsapp` in `data/config.yaml`.
+
 ## Faster image path (skip the build)
 
 Building `hermes-wa:local` from source is slow. If you have a box that already
@@ -96,6 +130,7 @@ install.sh                      orchestrator (bootstrap -> build -> new-brain)
 lib/bootstrap-vps.sh            swap + docker + ufw
 lib/build-image.sh             clone pinned hermes-agent source, docker build
 lib/new-brain.sh               scaffold + seed + start ONE brain
+lib/whatsapp-link.sh           link WhatsApp the right way (live QR, real TTY)
 templates/config.template.yaml the brain config (env-driven, no secrets)
 templates/docker-compose.template.yml
 templates/env.example          provider keys, APIFY_TOKEN, messaging tokens
