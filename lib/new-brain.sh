@@ -88,4 +88,7 @@ cat <<EOF
   1. edit $DIR/.env          -> add ONE provider key (and APIFY_TOKEN for MCP)
   2. run:  $NAME                  -> first run does the setup wizard, then chat
   3. edit $DIR/data/SOUL.md   -> give this brain its real role + voice
+  4. WhatsApp? set WHATSAPP_MODE / WHATSAPP_ALLOWED_USERS in .env, then run
+       $NAME whatsapp           -> scan the LIVE QR (see README: Linking WhatsApp)
+       NOT via the chat agent - it relays an expired QR. Scan in a real terminal.
 EOF
