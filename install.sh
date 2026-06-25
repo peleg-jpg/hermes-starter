@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# install.sh <brain-name> — turn a fresh VPS into a working featured Hermes.
+# install.sh <brain-name> - turn a fresh VPS into a working featured Hermes.
 #
 #   1. bootstrap the VPS (swap + docker + firewall)   [skip: --skip-bootstrap]
 #   2. build the hermes-wa:local image                [skip: --skip-build]
@@ -28,8 +28,10 @@ if [[ -z "$NAME" ]]; then echo "usage: ./install.sh <brain-name> [--skip-bootstr
 if [[ "$DO_BOOTSTRAP" == 1 ]]; then
   bash "$SCRIPT_DIR/lib/bootstrap-vps.sh"
   if ! docker ps >/dev/null 2>&1; then
-    echo "Docker group not active in this shell yet. Run 'newgrp docker' (or re-login)," >&2
-    echo "then re-run: ./install.sh $NAME --skip-bootstrap" >&2
+    echo "This is normal on first install: Docker was just added and your shell" >&2
+    echo "is not in the 'docker' group yet. Two commands finish the job:" >&2
+    echo "    newgrp docker        # or log out and back in" >&2
+    echo "    ./install.sh $NAME --skip-bootstrap" >&2
     exit 1
   fi
 fi

@@ -76,13 +76,13 @@ Start with headers that force strategic thinking about what matters, input clean
 
 ## ⚠️ CRITICAL: Formulas Over Hardcodes + Step-by-Step Verification
 
-**Environment — Office JS vs Python:**
-- **If running inside Excel (Office Add-in / Office JS):** Use Office JS directly (`Excel.run(async (context) => {...})`). Write formulas via `range.formulas = [["=E7/C7"]]`, not `range.values`. No separate recalc step — Excel handles it natively. Use `range.format.*` for colors/fonts.
+**Environment - Office JS vs Python:**
+- **If running inside Excel (Office Add-in / Office JS):** Use Office JS directly (`Excel.run(async (context) => {...})`). Write formulas via `range.formulas = [["=E7/C7"]]`, not `range.values`. No separate recalc step - Excel handles it natively. Use `range.format.*` for colors/fonts.
 - **If generating a standalone .xlsx file:** Use Python/openpyxl. Write `cell.value = "=E7/C7"` (formula string).
-- Same principles either way — just translate the API calls.
-- **Office JS merged cell pitfall:** Do NOT call `.merge()` then set `.values` on the merged range (throws `InvalidArgument` — range still reports its pre-merge dimensions). Instead write the value to the top-left cell alone, then merge + format the full range:
+- Same principles either way - just translate the API calls.
+- **Office JS merged cell pitfall:** Do NOT call `.merge()` then set `.values` on the merged range (throws `InvalidArgument` - range still reports its pre-merge dimensions). Instead write the value to the top-left cell alone, then merge + format the full range:
   ```js
-  ws.getRange("A1").values = [["TECHNOLOGY — COMPARABLE COMPANY ANALYSIS"]];
+  ws.getRange("A1").values = [["TECHNOLOGY - COMPARABLE COMPANY ANALYSIS"]];
   const hdr = ws.getRange("A1:H1");
   hdr.merge();
   hdr.format.fill.color = "#1F4E79";
@@ -91,9 +91,9 @@ Start with headers that force strategic thinking about what matters, input clean
   ```
 
 **Formulas, not hardcodes:**
-- Every derived value (margin, multiple, statistic) MUST be an Excel formula referencing input cells — never a pre-computed number pasted in
+- Every derived value (margin, multiple, statistic) MUST be an Excel formula referencing input cells - never a pre-computed number pasted in
 - When using Python/openpyxl to build the sheet: write `cell.value = "=E7/C7"` (formula string), NOT `cell.value = 0.687` (computed result)
-- The only hardcoded values should be raw input data (revenue, EBITDA, share price, etc.) — and every one of those gets a cell comment with its source
+- The only hardcoded values should be raw input data (revenue, EBITDA, share price, etc.) - and every one of those gets a cell comment with its source
 - Why: the model must update automatically when an input changes. A hardcoded margin is a silent bug waiting to happen.
 
 **Verify step-by-step with the user:**
@@ -101,7 +101,7 @@ Start with headers that force strategic thinking about what matters, input clean
 - After entering raw inputs → show the user the input block and confirm sources/periods before building formulas
 - After building operating metrics formulas → show the calculated margins and sanity-check with the user before moving to valuation
 - After building valuation multiples → show the multiples and confirm they look reasonable before adding statistics
-- Do NOT build the entire sheet end-to-end and then present it — catch errors early by confirming each section
+- Do NOT build the entire sheet end-to-end and then present it - catch errors early by confirming each section
 
 ---
 
@@ -129,8 +129,8 @@ Row 3: As of [Period] | All figures in [USD Millions/Billions] except per-share 
 - **Font size**: 11pt for data cells, 12pt for headers
 - **Bold text**: Section headers, company names, statistic labels
 
-**Default Color & Shading — Professional Blue/Grey Palette (minimal is better):**
-- **Keep it restrained** — only blues and greys. Do NOT introduce greens, oranges, reds, or multiple accent colors. A clean comps sheet uses 3-4 colors total.
+**Default Color & Shading - Professional Blue/Grey Palette (minimal is better):**
+- **Keep it restrained** - only blues and greys. Do NOT introduce greens, oranges, reds, or multiple accent colors. A clean comps sheet uses 3-4 colors total.
 - **Section headers** (e.g., "OPERATING STATISTICS & FINANCIAL METRICS"):
   - Dark blue background (`#1F4E79` or `#17365D` navy)
   - White bold text

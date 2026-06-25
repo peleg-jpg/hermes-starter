@@ -81,8 +81,8 @@ Standard IC memo format:
 
 ## Important Notes
 
-- IC memos should be factual and balanced — present both bull and bear cases honestly
+- IC memos should be factual and balanced - present both bull and bear cases honestly
 - Don't minimize risks. IC members will find them anyway; credibility matters
 - Use the firm's standard memo template if the user provides one
-- Financial tables should tie — check that EBITDA bridges, S&U balances, and returns math is consistent
+- Financial tables should tie - check that EBITDA bridges, S&U balances, and returns math is consistent
 - Ask for missing inputs rather than making assumptions on deal terms or returns

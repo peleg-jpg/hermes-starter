@@ -1,6 +1,6 @@
 # Calculation Verification Reference
 
-This file provides formulas and guidelines for verifying pre-calculated values in source data before populating templates. Source data should already contain calculated figures—use these formulas to verify accuracy.
+This file provides formulas and guidelines for verifying pre-calculated values in source data before populating templates. Source data should already contain calculated figures - use these formulas to verify accuracy.
 
 ## Contents
 
@@ -127,7 +127,7 @@ Consensus projection: $45-48bn
 
 ## Rounding Guidelines
 
-These are **typical conventions** — adjust based on the magnitude of values and template style:
+These are **typical conventions** - adjust based on the magnitude of values and template style:
 
 | Value Type | Typical Rounding | Example |
 |------------|------------------|---------|
@@ -140,8 +140,8 @@ These are **typical conventions** — adjust based on the magnitude of values an
 | Multiples | 1 decimal | 9.688 → 9.7x |
 
 **Rounding principles:**
-- Rounding should not materially change the figure — for smaller values, use finer precision
-- Consistency matters more than precision — use same rounding across similar figures
+- Rounding should not materially change the figure - for smaller values, use finer precision
+- Consistency matters more than precision - use same rounding across similar figures
 - When creating ranges, round down for low end, round up for high end
 - For summary statistics (mean, median), match precision of input data
 

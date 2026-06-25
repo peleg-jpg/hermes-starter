@@ -11,6 +11,7 @@ homelab/
 hermes-agent/
 # OS / editor junk.
 .DS_Store
+._*
 *.pyc
 __pycache__/
 .venv/

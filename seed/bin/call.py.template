@@ -1,0 +1,167 @@
+#!/usr/bin/env python3
+"""call.py - place an outbound phone call through Vapi (TEMPLATE).
+
+WHY THIS EXISTS / READ FIRST
+  Composio's Vapi toolkit is READ-ONLY (VAPI_LIST_* tools). It CANNOT place a
+  call. So even when the user says "use vapi to call X", the agent must route
+  to THIS helper, never to the VAPI_* Composio tools. The call goes straight to
+  the Vapi REST API (POST https://api.vapi.ai/call).
+
+  Vapi sits behind Cloudflare, which 403s requests with a default Python/urllib
+  User-Agent (Cloudflare error 1010, "The owner of this website has banned your
+  access"). We send  User-Agent: curl/8.5.0  to get through.
+
+SETUP (operator does this once on the box)
+  1. Rename this file:   cp bin/call.py.template bin/call.py  (then chmod +x bin/call.py)
+  2. Fill the two placeholder constants below:
+       PHONE_NUMBER_ID    = your Vapi phone-number id (the FROM caller line)
+       DEFAULT_ASSISTANT  = your Vapi assistant id (the voice agent that talks)
+     Find both in the Vapi dashboard. Keep them out of git.
+  3. Put the Vapi PRIVATE key in the brain .env as:
+       VAPI_API_KEY=<YOUR_VAPI_KEY>
+     (the script also falls back to reading VAPI_API_KEY from /opt/data/.env)
+
+USAGE
+  bin/call.py --to 0501234567 --say "Hi, this is a reminder about your meeting."
+  bin/call.py --to +9725XXXXXXXX --say "..." --voice "11labs:Rachel"
+  bin/call.py --to 0501234567 --prompt "You are a friendly clinic receptionist." --say "..."
+  bin/call.py --to 0501234567 --say "test" --dry-run   # build the payload, send nothing
+
+  --to        destination number. Local 0xx is normalized to +972xx by default
+              (change DEFAULT_COUNTRY_CODE for another country).
+  --say       the first line the assistant speaks (firstMessage).
+  --voice     optional "provider:voiceId", e.g. "11labs:Rachel", "vapi:Elliot".
+  --prompt    optional system prompt override for the assistant on this call.
+  --dry-run   print the payload that WOULD be sent and exit (no network call).
+
+  Prints a JSON receipt: {"ok": true, "call_id": "...", "status": "..."} on
+  success, or {"ok": false, "error": "..."} and a non-zero exit on failure.
+"""
+from __future__ import annotations
+
+import argparse
+import json
+import os
+import sys
+import urllib.error
+import urllib.request
+
+# ── operator fills these in (placeholders, no secrets) ──────────────────────
+PHONE_NUMBER_ID = "<PHONE_NUMBER_ID>"      # Vapi phone-number id (the FROM line)
+DEFAULT_ASSISTANT = "<ASSISTANT_ID>"        # Vapi assistant id (the voice agent)
+
+# ── tunables ────────────────────────────────────────────────────────────────
+VAPI_CALL_URL = "https://api.vapi.ai/call"
+DEFAULT_COUNTRY_CODE = "+972"               # Israel; change for another country
+# Cloudflare in front of Vapi 403s default UAs (error 1010). Pretend to be curl.
+USER_AGENT = "curl/8.5.0"
+ENV_FILE = "/opt/data/.env"                 # fallback location for VAPI_API_KEY
+
+
+def get_api_key() -> str:
+    """VAPI_API_KEY from env, else parsed out of /opt/data/.env."""
+    key = os.environ.get("VAPI_API_KEY", "").strip()
+    if key:
+        return key
+    try:
+        with open(ENV_FILE, "r", encoding="utf-8") as fh:
+            for line in fh:
+                line = line.strip()
+                if line.startswith("VAPI_API_KEY=") and not line.startswith("#"):
+                    return line.split("=", 1)[1].strip().strip('"').strip("'")
+    except OSError:
+        pass
+    return ""
+
+
+def normalize_number(raw: str) -> str:
+    """0xxxxxxxxx -> +972xxxxxxxxx ; pass through anything already +intl."""
+    n = "".join(ch for ch in raw.strip() if ch.isdigit() or ch == "+")
+    if n.startswith("+"):
+        return n
+    if n.startswith("00"):
+        return "+" + n[2:]
+    if n.startswith("0"):
+        return DEFAULT_COUNTRY_CODE + n[1:]
+    # bare national number with no leading 0 - assume already missing the trunk 0
+    return DEFAULT_COUNTRY_CODE + n
+
+
+def build_payload(to: str, say: str, voice: str | None, prompt: str | None) -> dict:
+    payload = {
+        "phoneNumberId": PHONE_NUMBER_ID,
+        "assistantId": DEFAULT_ASSISTANT,
+        "customer": {"number": normalize_number(to)},
+    }
+    overrides: dict = {}
+    if say:
+        overrides["firstMessage"] = say
+    if voice and ":" in voice:
+        provider, voice_id = voice.split(":", 1)
+        overrides["voice"] = {"provider": provider.strip(), "voiceId": voice_id.strip()}
+    if prompt:
+        overrides["model"] = {
+            "provider": "openai",
+            "model": "gpt-4o-mini",
+            "messages": [{"role": "system", "content": prompt}],
+        }
+    if overrides:
+        payload["assistantOverrides"] = overrides
+    return payload
+
+
+def place_call(payload: dict, api_key: str) -> dict:
+    data = json.dumps(payload).encode("utf-8")
+    req = urllib.request.Request(VAPI_CALL_URL, data=data, method="POST")
+    req.add_header("Authorization", f"Bearer {api_key}")
+    req.add_header("Content-Type", "application/json")
+    req.add_header("User-Agent", USER_AGENT)  # Cloudflare 1010 workaround
+    with urllib.request.urlopen(req, timeout=30) as resp:
+        return json.loads(resp.read().decode("utf-8"))
+
+
+def main(argv=None) -> int:
+    p = argparse.ArgumentParser(description="Place an outbound Vapi call.")
+    p.add_argument("--to", required=True, help="destination number (0xx local or +intl)")
+    p.add_argument("--say", required=True, help="first line the assistant speaks")
+    p.add_argument("--voice", default=None, help='optional "provider:voiceId"')
+    p.add_argument("--prompt", default=None, help="optional system-prompt override")
+    p.add_argument("--dry-run", action="store_true", help="print payload, send nothing")
+    args = p.parse_args(argv)
+
+    if PHONE_NUMBER_ID.startswith("<") or DEFAULT_ASSISTANT.startswith("<"):
+        print(json.dumps({"ok": False, "error": "fill PHONE_NUMBER_ID and DEFAULT_ASSISTANT in bin/call.py first"}))
+        return 2
+
+    payload = build_payload(args.to, args.say, args.voice, args.prompt)
+
+    if args.dry_run:
+        print(json.dumps({"ok": True, "dry_run": True, "payload": payload}, ensure_ascii=False))
+        return 0
+
+    api_key = get_api_key()
+    if not api_key:
+        print(json.dumps({"ok": False, "error": "VAPI_API_KEY not set (env or /opt/data/.env)"}))
+        return 2
+
+    try:
+        result = place_call(payload, api_key)
+    except urllib.error.HTTPError as e:
+        body = e.read().decode("utf-8", "replace")
+        print(json.dumps({"ok": False, "error": f"HTTP {e.code}", "body": body[:500]}))
+        return 1
+    except urllib.error.URLError as e:
+        print(json.dumps({"ok": False, "error": f"network: {e.reason}"}))
+        return 1
+
+    print(json.dumps({
+        "ok": True,
+        "call_id": result.get("id"),
+        "status": result.get("status"),
+        "to": payload["customer"]["number"],
+    }, ensure_ascii=False))
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

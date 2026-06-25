@@ -1,6 +1,6 @@
 ---
 name: deal-screening
-description: Quickly screen inbound deal flow — CIMs, teasers, and broker materials — against the fund's investment criteria. Extracts key deal metrics, runs a pass/fail framework, and outputs a one-page screening memo. Use when reviewing new deal flow, triaging inbound materials, or deciding whether to take a first call. Triggers on "screen this deal", "review this CIM", "should we look at this", "triage this teaser", or "deal screening".
+description: Quickly screen inbound deal flow - CIMs, teasers, and broker materials - against the fund's investment criteria. Extracts key deal metrics, runs a pass/fail framework, and outputs a one-page screening memo. Use when reviewing new deal flow, triaging inbound materials, or deciding whether to take a first call. Triggers on "screen this deal", "review this CIM", "should we look at this", "triage this teaser", or "deal screening".
 ---
 
 # Deal Screening
@@ -53,7 +53,7 @@ One-page screening memo suitable for sharing with partners or an IC quick screen
 
 ## Important Notes
 
-- Speed matters — screening should take minutes, not hours
+- Speed matters - screening should take minutes, not hours
 - Be direct about red flags. Don't bury concerns
 - If financials seem inconsistent or incomplete, flag it explicitly
 - Ask for the fund's criteria upfront if this is the first screening

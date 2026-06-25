@@ -1,6 +1,6 @@
 # Content Mapping Reference
 
-This file provides guidance for mapping source data to pitch deck template sections. The process is template-agnostic—these principles apply regardless of the specific template design.
+This file provides guidance for mapping source data to pitch deck template sections. The process is template-agnostic - these principles apply regardless of the specific template design.
 
 ## Contents
 
@@ -20,30 +20,30 @@ Before populating any template, analyze its structure:
 ### Step 1: Identify All Content Areas
 
 Scan each slide for:
-- **Title/header placeholders** — Where slide titles go
-- **Subtitle/definition areas** — Secondary headers or definitions
-- **Content boxes** — Main content areas (may have label sidebars)
-- **Table placeholders** — Areas designated for tabular data
-- **Chart/visual areas** — Spaces for charts, diagrams, or images
-- **Metric callout boxes** — Highlighted key figures
-- **Footnote/source bars** — Bottom areas for citations and notes
-- **Logo placeholder** — Usually top-right corner
+- **Title/header placeholders** - Where slide titles go
+- **Subtitle/definition areas** - Secondary headers or definitions
+- **Content boxes** - Main content areas (may have label sidebars)
+- **Table placeholders** - Areas designated for tabular data
+- **Chart/visual areas** - Spaces for charts, diagrams, or images
+- **Metric callout boxes** - Highlighted key figures
+- **Footnote/source bars** - Bottom areas for citations and notes
+- **Logo placeholder** - Usually top-right corner
 
 ### Step 2: Note Template Conventions
 
 Each template has its own style. Observe:
-- **Color scheme** — What colors are used for headers, backgrounds, accents?
-- **Font choices** — What fonts and sizes are already set?
-- **Box styling** — Do content boxes have sidebars, borders, or shading?
-- **Bullet styles** — What bullet symbols does the template use?
-- **Alignment patterns** — How are parallel sections aligned?
+- **Color scheme** - What colors are used for headers, backgrounds, accents?
+- **Font choices** - What fonts and sizes are already set?
+- **Box styling** - Do content boxes have sidebars, borders, or shading?
+- **Bullet styles** - What bullet symbols does the template use?
+- **Alignment patterns** - How are parallel sections aligned?
 
 ### Step 3: Identify Instruction vs. Output Areas
 
 Templates often include guidance:
-- **Instruction boxes** — Colored boxes with guidance text (often yellow background, white text)
-- **Placeholder text** — Text in [brackets] indicating what to replace
-- **Example content** — Sample content showing expected format
+- **Instruction boxes** - Colored boxes with guidance text (often yellow background, white text)
+- **Placeholder text** - Text in [brackets] indicating what to replace
+- **Example content** - Sample content showing expected format
 
 **Key distinction**: Instruction boxes tell you what to do; they should be reformatted or removed in final output. Output areas are where your content goes.
 
@@ -73,9 +73,9 @@ For each template section, identify:
 ### Step 3: Identify Gaps
 
 After mapping, note:
-- **Missing data** — Template requires data not in sources
-- **Extra data** — Sources contain data with no template home
-- **Format mismatches** — Data exists but in wrong format
+- **Missing data** - Template requires data not in sources
+- **Extra data** - Sources contain data with no template home
+- **Format mismatches** - Data exists but in wrong format
 
 ### Step 4: Resolve Gaps Before Populating
 
@@ -87,7 +87,7 @@ After mapping, note:
 
 ## Common Slide Types and Data Requirements
 
-These are typical data requirements for common slide types. Your specific template may vary—always follow the template's actual structure.
+These are typical data requirements for common slide types. Your specific template may vary - always follow the template's actual structure.
 
 ### Market Definition Slides
 
@@ -136,7 +136,7 @@ These are typical data requirements for common slide types. Your specific templa
 **Formatting principle:** If showing multiple sources, include a consensus/summary row.
 
 **Data mapping considerations:**
-- Multiple sources may have different estimates—map each to table rows
+- Multiple sources may have different estimates - map each to table rows
 - Consensus figures require calculation from individual sources
 - Projections should be verifiable using CAGR formula
 
@@ -300,9 +300,9 @@ Before moving to formatting, verify mapping completeness:
 
 Remember: This guidance describes common patterns, not requirements. Always:
 
-1. **Follow the template** — If template uses different section names, use those
-2. **Match template style** — Use template's existing fonts, colors, bullet styles
-3. **Preserve template structure** — Don't rearrange sections unless necessary
-4. **Respect template spacing** — Content should fit designated areas without overflow
+1. **Follow the template** - If template uses different section names, use those
+2. **Match template style** - Use template's existing fonts, colors, bullet styles
+3. **Preserve template structure** - Don't rearrange sections unless necessary
+4. **Respect template spacing** - Content should fit designated areas without overflow
 
 The goal is to populate the template as designed, not to redesign it.

@@ -67,9 +67,9 @@ For each sponsor:
 
 Tier the buyer list:
 
-- **Tier 1 (5-10)**: Highest strategic fit, proven acquirers, clear rationale — contact first
-- **Tier 2 (10-15)**: Good fit but less obvious — contact in second wave
-- **Tier 3 (10-20)**: Possible but lower probability — contact if process needs broadening
+- **Tier 1 (5-10)**: Highest strategic fit, proven acquirers, clear rationale - contact first
+- **Tier 2 (10-15)**: Good fit but less obvious - contact in second wave
+- **Tier 3 (10-20)**: Possible but lower probability - contact if process needs broadening
 
 ### Step 5: Contact Mapping
 
@@ -90,9 +90,9 @@ For each Tier 1 buyer:
 
 ## Important Notes
 
-- Quality over quantity — a focused list of 30-40 well-researched buyers beats a list of 200 names
-- Research recent M&A activity — buyers who just did a deal in the space are either hungry for more or tapped out
-- Check for antitrust concerns with direct competitors — flag any that might face regulatory issues
-- Financial sponsors: check fund vintage and deployment pace — a fund nearing end of investment period may be more motivated
+- Quality over quantity - a focused list of 30-40 well-researched buyers beats a list of 200 names
+- Research recent M&A activity - buyers who just did a deal in the space are either hungry for more or tapped out
+- Check for antitrust concerns with direct competitors - flag any that might face regulatory issues
+- Financial sponsors: check fund vintage and deployment pace - a fund nearing end of investment period may be more motivated
 - Always ask the seller if there are buyers they want included or excluded
-- Update the list as the process progresses — move buyers between tiers based on feedback
+- Update the list as the process progresses - move buyers between tiers based on feedback

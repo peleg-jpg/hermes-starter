@@ -1,6 +1,6 @@
 ---
 name: dd-meeting-prep
-description: Prepare for due diligence meetings — management presentations, expert network calls, customer references, and advisor sessions. Generates targeted question lists, benchmarks to reference, and red flags to probe. Use before any diligence meeting or call. Triggers on "prep for management meeting", "diligence call prep", "expert call questions", "customer reference questions", or "meeting prep for [company]".
+description: Prepare for due diligence meetings - management presentations, expert network calls, customer references, and advisor sessions. Generates targeted question lists, benchmarks to reference, and red flags to probe. Use before any diligence meeting or call. Triggers on "prep for management meeting", "diligence call prep", "expert call questions", "customer reference questions", or "meeting prep for [company]".
 ---
 
 # Diligence Meeting Prep
@@ -38,14 +38,14 @@ Organize questions by priority and topic. Structure depends on meeting type:
 - How do customers evaluate you vs. alternatives?
 
 **Operations & Team**
-- Walk us through the org chart — who are the key people?
+- Walk us through the org chart - who are the key people?
 - What roles are you hiring for? What's been hardest to fill?
 - What keeps you up at night operationally?
 
 **Financial Deep-Dive**
-- Walk us through the margin bridge — what's changed and why?
+- Walk us through the margin bridge - what's changed and why?
 - Any one-time or non-recurring items we should understand?
-- How do you think about capex — maintenance vs. growth?
+- How do you think about capex - maintenance vs. growth?
 - Working capital seasonality?
 
 **Forward Look**
@@ -96,8 +96,8 @@ One-page meeting prep doc:
 
 ## Important Notes
 
-- Lead with open-ended questions — let management talk, then follow up on specifics
-- Don't lead the witness — ask neutral questions, not "isn't it true that..."
+- Lead with open-ended questions - let management talk, then follow up on specifics
+- Don't lead the witness - ask neutral questions, not "isn't it true that..."
 - Take notes on body language and confidence levels, not just answers
 - Always end with: "What haven't we asked about that we should?"
-- Keep the question list to 15-20 max — you won't get through more in a 60-90 min session
+- Keep the question list to 15-20 max - you won't get through more in a 60-90 min session

@@ -1,6 +1,6 @@
 ---
 name: deal-sourcing
-description: PE deal sourcing workflow — discover target companies, check CRM for existing relationships, and draft personalized founder outreach emails. Use when sourcing new deals, prospecting companies in a sector, or reaching out to founders. Triggers on "find companies", "source deals", "draft founder email", "check if we've seen this company", or "outreach to founder".
+description: PE deal sourcing workflow - discover target companies, check CRM for existing relationships, and draft personalized founder outreach emails. Use when sourcing new deals, prospecting companies in a sector, or reaching out to founders. Triggers on "find companies", "source deals", "draft founder email", "check if we've seen this company", or "outreach to founder".
 ---
 
 # Deal Sourcing
@@ -26,18 +26,18 @@ Before outreach, check if the company or founder already exists in the firm's CR
 - Search Slack for any internal mentions or prior discussions about the target
 - Ask the user: "Have you or your team had any prior contact with [Company]?"
 - Flag any existing relationships, prior passes, or known context
-- **Output**: For each company, note: "New" (no prior contact), "Existing" (prior correspondence found — summarize), or "Previously Passed" (if evidence of a prior pass)
+- **Output**: For each company, note: "New" (no prior contact), "Existing" (prior correspondence found - summarize), or "Previously Passed" (if evidence of a prior pass)
 
 ### Step 3: Draft Founder Outreach
 
 Draft personalized cold emails to founders/CEOs:
 
-- **Tone**: Professional but warm. Not overly formal — founders respond better to genuine, concise outreach
+- **Tone**: Professional but warm. Not overly formal - founders respond better to genuine, concise outreach
 - **Structure**:
-  1. Brief intro — who you are and your firm (ask user for their firm intro if not known)
-  2. Why this company caught your attention — reference something specific (product, market position, growth)
-  3. What you're looking for — partnership, not just a transaction
-  4. Soft ask — "Would you be open to a brief conversation?"
+  1. Brief intro - who you are and your firm (ask user for their firm intro if not known)
+  2. Why this company caught your attention - reference something specific (product, market position, growth)
+  3. What you're looking for - partnership, not just a transaction
+  4. Soft ask - "Would you be open to a brief conversation?"
 - **Personalization**: Reference the company's specific product, recent news, or market position. Never use generic templates
 - **Length**: 4-6 sentences max. Founders are busy
 - **Voice matching**: If the user has sent prior outreach emails, study them to match their tone and style. Search Gmail for "sent" emails with keywords like "reaching out", "introduction", "partnership" to find examples
@@ -65,4 +65,4 @@ Draft personalized cold emails to founders/CEOs:
 - Always present the shortlist for user review before drafting emails
 - Never send emails without explicit user approval
 - If the user's firm intro or investment criteria aren't clear, ask before drafting
-- Prioritize quality over quantity — 5 well-researched targets beat 20 generic ones
+- Prioritize quality over quantity - 5 well-researched targets beat 20 generic ones

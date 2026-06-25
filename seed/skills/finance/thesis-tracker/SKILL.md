@@ -12,7 +12,7 @@ description: Maintain and update investment theses for portfolio positions and w
 If creating a new thesis:
 - **Company**: Name and ticker
 - **Position**: Long or Short
-- **Thesis statement**: 1-2 sentence core thesis (e.g., "Long ACME — margin expansion from pricing power + operating leverage as mix shifts to software")
+- **Thesis statement**: 1-2 sentence core thesis (e.g., "Long ACME - margin expansion from pricing power + operating leverage as mix shifts to software")
 - **Key pillars**: 3-5 supporting arguments
 - **Key risks**: 3-5 risks that would invalidate the thesis
 - **Catalysts**: Upcoming events that could prove/disprove the thesis (earnings, product launches, regulatory decisions)
@@ -60,7 +60,7 @@ Format: Concise markdown or Word doc with the scorecard, recent updates, and cur
 
 ## Important Notes
 
-- A thesis should be falsifiable — if nothing could disprove it, it's not a thesis
+- A thesis should be falsifiable - if nothing could disprove it, it's not a thesis
 - Track disconfirming evidence as rigorously as confirming evidence
 - Review theses at least quarterly, even when nothing dramatic has happened
 - If the user manages multiple positions, offer to do a full portfolio thesis review

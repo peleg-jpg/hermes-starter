@@ -110,9 +110,9 @@ Prioritized action items:
 
 ## Important Notes
 
-- Financial plans are living documents — review and update annually or after major life events
-- Be conservative with return assumptions — overestimating returns gives false confidence
-- Tax planning is as important as investment returns — model tax implications of every recommendation
-- Social Security timing is a major lever — model start ages of 62, 67, and 70
-- Always stress-test the plan — a plan that only works in the base case isn't a good plan
+- Financial plans are living documents - review and update annually or after major life events
+- Be conservative with return assumptions - overestimating returns gives false confidence
+- Tax planning is as important as investment returns - model tax implications of every recommendation
+- Social Security timing is a major lever - model start ages of 62, 67, and 70
+- Always stress-test the plan - a plan that only works in the base case isn't a good plan
 - Compliance: ensure recommendations align with suitability/fiduciary standards

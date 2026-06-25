@@ -82,9 +82,9 @@ Generate a summary for weekly team meetings:
 
 ## Important Notes
 
-- Update the tracker weekly at minimum — stale trackers are worse than no tracker
-- Flag deals where milestones are slipping — early warning prevents surprises
-- Action items without owners and due dates don't get done — be specific
-- The pipeline view should show deal stage, size, and likelihood — useful for revenue forecasting
-- Keep notes on buyer/investor feedback — patterns in feedback inform strategy adjustments
-- Archive closed/dead deals separately — keep the active view clean
+- Update the tracker weekly at minimum - stale trackers are worse than no tracker
+- Flag deals where milestones are slipping - early warning prevents surprises
+- Action items without owners and due dates don't get done - be specific
+- The pipeline view should show deal stage, size, and likelihood - useful for revenue forecasting
+- Keep notes on buyer/investor feedback - patterns in feedback inform strategy adjustments
+- Archive closed/dead deals separately - keep the active view clean

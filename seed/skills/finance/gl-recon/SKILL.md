@@ -1,6 +1,6 @@
 ---
 name: gl-recon
-description: Reconcile general ledger to subledger for a trade date or period — match at the position or transaction level, surface breaks, and classify each break by likely cause. Use for daily or month-end recon runs across asset classes.
+description: Reconcile general ledger to subledger for a trade date or period - match at the position or transaction level, surface breaks, and classify each break by likely cause. Use for daily or month-end recon runs across asset classes.
 ---
 
 # GL ↔ subledger reconciliation
@@ -13,8 +13,8 @@ Given a GL extract and a subledger extract for the same scope (entity, asset cla
 
 Align the two extracts to a common key and a common set of comparison columns.
 
-- **Key** — the lowest grain both sides share (e.g., `security_id + account + trade_date`, or `journal_line_id`).
-- **Comparison columns** — quantity, local amount, base amount, FX rate, posting date.
+- **Key** - the lowest grain both sides share (e.g., `security_id + account + trade_date`, or `journal_line_id`).
+- **Comparison columns** - quantity, local amount, base amount, FX rate, posting date.
 - Coerce types (dates to ISO, amounts to two-decimal numerics, identifiers to upper-stripped strings) so equality tests are exact.
 
 ## Step 2: Match
@@ -34,20 +34,20 @@ Tolerance: default `0.01` on amounts, `0` on quantity. Use the firm's policy if 
 
 ## Step 3: Classify likely cause
 
-For each break, tag a likely cause from this set — this is a hypothesis for the resolver, not a conclusion:
+For each break, tag a likely cause from this set - this is a hypothesis for the resolver, not a conclusion:
 
-- **Timing** — trade-date vs. settle-date posting, late feed, cut-off mismatch
-- **FX** — rate-source or rate-date mismatch (test: local amounts agree, base amounts don't)
-- **Mapping** — security or account mapped to a different GL account than expected
-- **Duplicate / missing post** — one side has the line twice or not at all
-- **Fee / accrual** — small recurring delta consistent with a fee or accrual posted on one side only
-- **Data quality** — identifier format mismatch, sign flip, unit-of-measure difference
+- **Timing** - trade-date vs. settle-date posting, late feed, cut-off mismatch
+- **FX** - rate-source or rate-date mismatch (test: local amounts agree, base amounts don't)
+- **Mapping** - security or account mapped to a different GL account than expected
+- **Duplicate / missing post** - one side has the line twice or not at all
+- **Fee / accrual** - small recurring delta consistent with a fee or accrual posted on one side only
+- **Data quality** - identifier format mismatch, sign flip, unit-of-measure difference
 
 ## Step 4: Output
 
 Produce two artifacts:
 
-1. **Break report** — one row per break with key, both-side values, bucket, likely cause, and a one-line note. Sort by absolute base-amount delta descending.
-2. **Summary** — counts and totals by bucket and by likely cause, plus the matched percentage.
+1. **Break report** - one row per break with key, both-side values, bucket, likely cause, and a one-line note. Sort by absolute base-amount delta descending.
+2. **Summary** - counts and totals by bucket and by likely cause, plus the matched percentage.
 
 Hand the break report to `break-trace` to root-cause the material ones; hand the summary to the resolver to format the sign-off package.

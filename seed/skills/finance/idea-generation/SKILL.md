@@ -66,7 +66,7 @@ Run screens based on the style:
 For thematic ideas, research the theme and identify beneficiaries:
 
 1. Define the thesis (e.g., "AI infrastructure spending accelerates through 2026")
-2. Map the value chain — who benefits directly vs. indirectly?
+2. Map the value chain - who benefits directly vs. indirectly?
 3. Identify pure-play vs. diversified exposure
 4. Assess which names are already "priced in" vs. under-appreciated
 5. Look for second-order beneficiaries that the market hasn't connected to the theme
@@ -75,7 +75,7 @@ For thematic ideas, research the theme and identify beneficiaries:
 
 For each idea that passes the screen, present:
 
-**[Company Name] — [Long/Short] — [One-Line Thesis]**
+**[Company Name] - [Long/Short] - [One-Line Thesis]**
 
 | Metric | Value | vs. Peers |
 |--------|-------|-----------|
@@ -106,9 +106,9 @@ For each idea that passes the screen, present:
 
 ## Important Notes
 
-- Screens surface candidates, not conclusions — every screen output needs fundamental work
+- Screens surface candidates, not conclusions - every screen output needs fundamental work
 - The best ideas often come from intersections (e.g., quality company at value price due to temporary headwind)
-- Avoid crowded trades — check ownership data, short interest, and how many analysts cover the name
-- Contrarian ideas need a catalyst — being early without a catalyst is the same as being wrong
-- Track idea hit rates over time — which screens and approaches produce the best ideas?
-- Short ideas need higher conviction — timing is harder and risk is asymmetric
+- Avoid crowded trades - check ownership data, short interest, and how many analysts cover the name
+- Contrarian ideas need a catalyst - being early without a catalyst is the same as being wrong
+- Track idea hit rates over time - which screens and approaches produce the best ideas?
+- Short ideas need higher conviction - timing is harder and risk is asymmetric

@@ -1,6 +1,6 @@
 ---
 name: roll-forward
-description: Build a roll-forward schedule for a balance-sheet account — beginning balance plus activity less reversals equals ending balance, with each component tied to GL. Use for month-end close packages and audit support.
+description: Build a roll-forward schedule for a balance-sheet account - beginning balance plus activity less reversals equals ending balance, with each component tied to GL. Use for month-end close packages and audit support.
 ---
 
 # Roll-forward
@@ -22,11 +22,11 @@ Ending balance (per GL at period end)           Y
 
 ## Tie each line
 
-- **Beginning** — prior-period close package, or GL balance at prior-period end date.
-- **Each activity line** — a GL query (account + date range + journal-source filter) via the internal-gl MCP. Cite the query.
-- **Ending** — GL balance at period-end date.
+- **Beginning** - prior-period close package, or GL balance at prior-period end date.
+- **Each activity line** - a GL query (account + date range + journal-source filter) via the internal-gl MCP. Cite the query.
+- **Ending** - GL balance at period-end date.
 
-The schedule **must foot**: `X + A + B − C − D + E + F = Y`. If it doesn't, the gap is an unexplained item — surface it, don't plug it.
+The schedule **must foot**: `X + A + B − C − D + E + F = Y`. If it doesn't, the gap is an unexplained item - surface it, don't plug it.
 
 ## Output
 

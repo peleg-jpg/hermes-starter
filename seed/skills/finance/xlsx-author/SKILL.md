@@ -1,6 +1,6 @@
 ---
 name: xlsx-author
-description: Produce a .xlsx file on disk (headless) instead of driving a live Excel workbook — for managed-agent sessions with no open Office app.
+description: Produce a .xlsx file on disk (headless) instead of driving a live Excel workbook - for managed-agent sessions with no open Office app.
 ---
 
 # xlsx-author
@@ -39,4 +39,4 @@ wb.save("./out/model.xlsx")
 
 ## When NOT to use
 
-If `mcp__office__excel_*` tools are available (Cowork plugin mode), use those instead — they drive the user's live workbook with review checkpoints. This skill is the file-producing fallback for headless runs.
+If `mcp__office__excel_*` tools are available (Cowork plugin mode), use those instead - they drive the user's live workbook with review checkpoints. This skill is the file-producing fallback for headless runs.

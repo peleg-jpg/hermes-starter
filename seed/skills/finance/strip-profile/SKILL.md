@@ -208,7 +208,7 @@ slide.addText('Tesla, Inc. (TSLA)', { x: 0.3, y: 0.2, w: 9.4, h: 0.35, fontSize:
 |----------|----------|---------|
 | **1** | x=0.3, y=0.6, w=4.7, h=3.0 | **Company Overview**: HQ, founded, key stats, business summary (4-5 bullets) |
 | **2** | x=5.0, y=0.6, w=4.7, h=3.0 | **Business & Positioning**: revenue drivers, products/services, competitive position, growth drivers (4-5 bullets) |
-| **3** | x=0.3, y=3.7, w=4.7, h=3.5 | **Key Financials**: Revenue, EBITDA, margins, EPS, FCF + Valuation (Mkt Cap, EV, multiples) — **table OR chart, not both** |
+| **3** | x=0.3, y=3.7, w=4.7, h=3.5 | **Key Financials**: Revenue, EBITDA, margins, EPS, FCF + Valuation (Mkt Cap, EV, multiples) - **table OR chart, not both** |
 | **4** | x=5.0, y=3.7, w=4.7, h=3.5 | **For public companies**: 1Y stock price chart + top shareholders. **For private**: Recent developments or Ownership/M&A history |
 
 ### Font Sizes - USE THESE EXACT VALUES
@@ -246,7 +246,7 @@ slide.addText('Company Overview', {
 - **Font: Arial** (or as specified by user/brand guidelines)
 - **Quadrant titles**: Title Case (not ALL CAPS), e.g., "Company Overview" not "COMPANY OVERVIEW"
 - **Bullets**: Bold key terms at start, e.g., "**Market Position:** Leading global manufacturer..."
-- White background only — no boxes, fills, or shading
+- White background only - no boxes, fills, or shading
 - Section headers: bold text, follow brand guidelines for styling
 - All quadrants equally sized and aligned
 
@@ -347,7 +347,7 @@ slide.addTable([
   ['EBITDA', '$8.9B', '$9.5B'],
   ['EBITDA Margin', '17.3%', '17.5%'],
   ['EPS', '$3.42', '$3.75'],
-  ['Market Cap', '$185B', '—'],
+  ['Market Cap', '$185B', ' - '],
   ['EV/EBITDA', '12.5x', '11.7x']
 ], {
   x: 0.45, y: 4.1, w: 4.3, h: 3.0,  // Below header in bottom-left quadrant

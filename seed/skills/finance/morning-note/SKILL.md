@@ -1,6 +1,6 @@
 ---
 name: morning-note
-description: Draft concise morning meeting notes summarizing overnight developments, trade ideas, and key events for coverage stocks. Designed for the 7am morning meeting format — tight, opinionated, actionable. Triggers on "morning note", "morning meeting", "what happened overnight", "trade idea", "morning call prep", or "daily note".
+description: Draft concise morning meeting notes summarizing overnight developments, trade ideas, and key events for coverage stocks. Designed for the 7am morning meeting format - tight, opinionated, actionable. Triggers on "morning note", "morning meeting", "what happened overnight", "trade idea", "morning call prep", or "daily note".
 ---
 
 # Morning Note
@@ -31,14 +31,14 @@ Scan for relevant events across coverage universe:
 
 ### Step 2: Morning Note Format
 
-Keep it tight — a morning note should be readable in 2 minutes:
+Keep it tight - a morning note should be readable in 2 minutes:
 
 ---
 
-**[Date] Morning Note — [Analyst Name]**
+**[Date] Morning Note - [Analyst Name]**
 **[Sector Coverage]**
 
-**Top Call: [Headline — the one thing PMs need to hear]**
+**Top Call: [Headline - the one thing PMs need to hear]**
 - 2-3 sentences on the key development and why it matters
 - Stock impact: price target, rating reiteration/change
 
@@ -69,7 +69,7 @@ If a coverage company reported, provide a quick reaction:
 | [Key metric] | | | |
 | Guidance | | | |
 
-**Our Take**: 2-3 sentences — is this good or bad for the stock? Does it change our thesis?
+**Our Take**: 2-3 sentences - is this good or bad for the stock? Does it change our thesis?
 
 **Action**: Maintain / Upgrade / Downgrade rating? Adjust price target?
 
@@ -77,13 +77,13 @@ If a coverage company reported, provide a quick reaction:
 
 - Markdown text for email/Slack distribution
 - Word document if formal distribution is needed
-- Keep to 1 page max — PMs and traders won't read more
+- Keep to 1 page max - PMs and traders won't read more
 
 ## Important Notes
 
-- Be opinionated — morning notes that just summarize news without a view are useless
-- Lead with the most important thing — don't bury the headline
-- "No news" is a valid morning note — say "nothing material overnight, maintaining positioning"
+- Be opinionated - morning notes that just summarize news without a view are useless
+- Lead with the most important thing - don't bury the headline
+- "No news" is a valid morning note - say "nothing material overnight, maintaining positioning"
 - Distinguish between actionable events (earnings, M&A) and noise (minor analyst notes, non-events)
-- Time-stamp your takes — if you're writing at 6am, note that pre-market may change by open
-- If you're wrong, own it in the next morning note — credibility matters more than being right every time
+- Time-stamp your takes - if you're writing at 6am, note that pre-market may change by open
+- If you're wrong, own it in the next morning note - credibility matters more than being right every time

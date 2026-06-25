@@ -1,6 +1,6 @@
 ---
 name: catalyst-calendar
-description: Build and maintain a calendar of upcoming catalysts across a coverage universe — earnings dates, conferences, product launches, regulatory decisions, and macro events. Helps prioritize attention and position ahead of events. Triggers on "catalyst calendar", "upcoming events", "what's coming up", "earnings calendar", "event calendar", or "catalyst tracker".
+description: Build and maintain a calendar of upcoming catalysts across a coverage universe - earnings dates, conferences, product launches, regulatory decisions, and macro events. Helps prioritize attention and position ahead of events. Triggers on "catalyst calendar", "upcoming events", "what's coming up", "earnings calendar", "event calendar", or "catalyst tracker".
 ---
 
 # Catalyst Calendar
@@ -56,9 +56,9 @@ For each company, identify upcoming events:
 Each week, generate a forward-looking summary:
 
 **This Week's Key Events:**
-1. [Day]: [Company] Q[X] earnings — consensus [$X EPS], our estimate [$X], key focus: [metric]
-2. [Day]: [Event] — why it matters for [stocks]
-3. [Day]: [Macro release] — expectations and positioning
+1. [Day]: [Company] Q[X] earnings - consensus [$X EPS], our estimate [$X], key focus: [metric]
+2. [Day]: [Event] - why it matters for [stocks]
+3. [Day]: [Macro release] - expectations and positioning
 
 **Next Week Preview:**
 - Early heads-up on important events coming
@@ -76,9 +76,9 @@ Each week, generate a forward-looking summary:
 
 ## Important Notes
 
-- Earnings dates shift — verify against company IR pages and Bloomberg/FactSet closer to the date
+- Earnings dates shift - verify against company IR pages and Bloomberg/FactSet closer to the date
 - Pre-announce risk: track companies with a history of pre-announcing (positive or negative)
-- Conference attendance lists are valuable — which companies are presenting and which are conspicuously absent?
-- Some catalysts are recurring (monthly industry data) — build a template and auto-populate
+- Conference attendance lists are valuable - which companies are presenting and which are conspicuously absent?
+- Some catalysts are recurring (monthly industry data) - build a template and auto-populate
 - Color-code by impact level: Red = high impact, Yellow = moderate, Green = routine
-- Archive past catalysts with the actual outcome — builds pattern recognition over time
+- Archive past catalysts with the actual outcome - builds pattern recognition over time

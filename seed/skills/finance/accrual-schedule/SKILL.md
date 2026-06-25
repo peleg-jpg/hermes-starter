@@ -1,6 +1,6 @@
 ---
 name: accrual-schedule
-description: Build the period-end accrual schedule — for each accrual, compute the entry, cite the support, and draft the JE. Use during month-end close; the JE is a draft for controller approval, not a posting.
+description: Build the period-end accrual schedule - for each accrual, compute the entry, cite the support, and draft the JE. Use during month-end close; the JE is a draft for controller approval, not a posting.
 ---
 
 # Accrual schedule
@@ -27,11 +27,11 @@ For each row with a non-zero this-period accrual, draft:
 ```
 Dr  <expense account>     <amount>
   Cr  <accrued liability>     <amount>
-Memo: <accrual name> — <period> accrual per <support reference>
+Memo: <accrual name> - <period> accrual per <support reference>
 ```
 
 Reversing entries: if the policy marks the accrual as auto-reversing, note "reverses on day 1 of next period" in the memo.
 
 ## Output
 
-One table (the schedule) plus a JE draft block. **Do not post** — this is staged for controller sign-off.
+One table (the schedule) plus a JE draft block. **Do not post** - this is staged for controller sign-off.

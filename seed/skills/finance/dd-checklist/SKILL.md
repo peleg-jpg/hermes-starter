@@ -21,8 +21,8 @@ Ask the user for:
 Generate a checklist across all major workstreams, tailored to the sector:
 
 **Financial Due Diligence**
-- Quality of earnings (QoE) — revenue and EBITDA adjustments
-- Working capital analysis — normalized vs. actual
+- Quality of earnings (QoE) - revenue and EBITDA adjustments
+- Working capital analysis - normalized vs. actual
 - Debt and debt-like items
 - Capital expenditure (maintenance vs. growth)
 - Tax structure and exposure
@@ -32,7 +32,7 @@ Generate a checklist across all major workstreams, tailored to the sector:
 **Commercial Due Diligence**
 - Market size and growth (TAM/SAM/SOM)
 - Competitive positioning and market share
-- Customer analysis — concentration, retention, NPS
+- Customer analysis - concentration, retention, NPS
 - Pricing power and contract structure
 - Sales pipeline and backlog
 - Go-to-market effectiveness
@@ -112,6 +112,6 @@ Automatically add relevant items based on sector:
 ## Important Notes
 
 - Prioritize P0 items that are gating to LOI or close
-- Flag items where the seller is slow to respond — may indicate issues
+- Flag items where the seller is slow to respond - may indicate issues
 - Cross-reference data room contents against the checklist to identify gaps
-- Update the checklist as diligence progresses — it's a living document
+- Update the checklist as diligence progresses - it's a living document
