@@ -21,7 +21,7 @@ Build a "what to watch" framework specific to the company:
 **Financial Metrics:**
 - Revenue vs. consensus (total and by segment)
 - EPS vs. consensus
-- Margins (gross, operating, net) — expanding or contracting?
+- Margins (gross, operating, net) - expanding or contracting?
 - Free cash flow
 - Forward guidance vs. consensus
 
@@ -45,15 +45,15 @@ Build 3 scenarios with stock price implications:
 For each scenario:
 - What would need to happen operationally
 - What management commentary would signal this
-- Historical context — how has the stock moved on similar prints?
+- Historical context - how has the stock moved on similar prints?
 
 ### Step 4: Catalyst Checklist
 
 Identify the 3-5 things that will determine the stock's reaction:
 
-1. [Metric] vs. [consensus/whisper number] — why it matters
-2. [Guidance item] — what the buy-side expects to hear
-3. [Narrative shift] — any strategic changes, M&A, restructuring
+1. [Metric] vs. [consensus/whisper number] - why it matters
+2. [Guidance item] - what the buy-side expects to hear
+3. [Narrative shift] - any strategic changes, M&A, restructuring
 
 ### Step 5: Output
 
@@ -67,7 +67,7 @@ One-page earnings preview with:
 
 ## Important Notes
 
-- Consensus estimates change — always note the source and date of estimates
+- Consensus estimates change - always note the source and date of estimates
 - "Whisper numbers" from buy-side surveys are often more relevant than published consensus
 - Historical earnings reactions help calibrate expectations (search for "[company] earnings reaction history")
-- Options-implied move tells you what the market expects — compare to your scenarios
+- Options-implied move tells you what the market expects - compare to your scenarios

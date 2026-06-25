@@ -67,9 +67,9 @@ Additional requirements beyond IOI:
 
 ## Important Notes
 
-- Process letters set the tone for the entire deal — be clear, professional, and organized
-- Deadlines should be firm but reasonable — typically 2-3 weeks for IOIs, 3-4 weeks for final bids
-- Always include the evaluation criteria — buyers want to know how they'll be judged
+- Process letters set the tone for the entire deal - be clear, professional, and organized
+- Deadlines should be firm but reasonable - typically 2-3 weeks for IOIs, 3-4 weeks for final bids
+- Always include the evaluation criteria - buyers want to know how they'll be judged
 - Coordinate with legal on any representations or commitments in the letter
-- Client should review and approve before sending — they may want to adjust tone or terms
-- Keep a log of who received each letter and when — this becomes the process tracker
+- Client should review and approve before sending - they may want to adjust tone or terms
+- Keep a log of who received each letter and when - this becomes the process tracker

@@ -81,7 +81,7 @@ Online tutoring marketplaces (Preply, italki, Cambly)
 | Excluded/Negative | × (cross) | Items outside scope, features absent |
 | Neutral list | • (bullet) | General enumeration, commentary |
 | Numbered sequence | 1. 2. 3. | Process steps, rankings |
-| Sub-bullets | ‣ or – | Secondary points under main bullets |
+| Sub-bullets | ‣ or - | Secondary points under main bullets |
 
 Adapt symbol usage to match the template's existing conventions.
 

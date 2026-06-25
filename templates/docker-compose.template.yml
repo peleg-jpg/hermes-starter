@@ -1,4 +1,4 @@
-# Isolated Hermes brain "__NAME__" — reuses the hermes-wa:local image,
+# Isolated Hermes brain "__NAME__" - reuses the hermes-wa:local image,
 # own state volume, own container, own .env, own resource budget.
 # Rendered by lib/new-brain.sh. Edit mem_limit / cpus to resize.
 #

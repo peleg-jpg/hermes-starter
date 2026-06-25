@@ -24,8 +24,8 @@ description: Create comprehensive industry and sector landscape reports covering
 - Market segmentation (by product, geography, end market, customer type)
 
 **Industry Structure**
-- Fragmented vs. consolidated — top 5 market share
-- Value chain map — where does value accrue?
+- Fragmented vs. consolidated - top 5 market share
+- Value chain map - where does value accrue?
 - Business model types (subscription, transaction, licensing, services)
 - Barriers to entry (capital, regulatory, technical, network effects)
 
@@ -81,8 +81,8 @@ For each company, brief profile:
 
 ## Important Notes
 
-- Source all market size data — cite the research firm or methodology
+- Source all market size data - cite the research firm or methodology
 - Distinguish between TAM hype and realistic addressable market
-- Sector overviews age fast — note the date and flag data that may be stale
-- Charts are essential — market size waterfall, competitive positioning matrix, valuation scatter plot
+- Sector overviews age fast - note the date and flag data that may be stale
+- Charts are essential - market size waterfall, competitive positioning matrix, valuation scatter plot
 - If for a client, tailor the "so what" to their specific situation (M&A target identification, competitive positioning, market entry)

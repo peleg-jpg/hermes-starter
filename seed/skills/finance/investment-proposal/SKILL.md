@@ -28,7 +28,7 @@ Gather:
 - Client service model (how often do we meet, who do they call)
 
 **II. Understanding Your Needs** (1 page)
-- Restate their goals and concerns — show you listened
+- Restate their goals and concerns - show you listened
 - Key planning considerations identified in discovery
 - What success looks like for them
 
@@ -56,13 +56,13 @@ Proposed allocation:
 - Underlying fund expenses
 - Total all-in cost estimate
 - How fees compare to industry averages
-- Value proposition — what they get for the fee
+- Value proposition - what they get for the fee
 
 **VI. Getting Started** (1 page)
 - Account opening process
 - Asset transfer timeline
 - Transition plan (if moving from another advisor)
-- First 90 days — what to expect
+- First 90 days - what to expect
 - Required documents and next steps
 
 ### Step 3: Customization
@@ -80,9 +80,9 @@ Proposed allocation:
 
 ## Important Notes
 
-- The proposal should feel personalized, not templated — reference their specific situation
-- Don't oversell performance — set realistic expectations and emphasize process
+- The proposal should feel personalized, not templated - reference their specific situation
+- Don't oversell performance - set realistic expectations and emphasize process
 - Always include disclaimers (projections are hypothetical, past performance, etc.)
-- The transition plan matters — clients fear the disruption of switching advisors
+- The transition plan matters - clients fear the disruption of switching advisors
 - Follow up within 48 hours with the proposal and a clear next step
 - Compliance must review before presenting to prospects

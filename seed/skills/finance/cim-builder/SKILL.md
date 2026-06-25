@@ -24,10 +24,10 @@ Ask for available inputs:
 Standard CIM table of contents:
 
 **I. Executive Summary** (2-3 pages)
-- Company overview — what they do, why they win
+- Company overview - what they do, why they win
 - Investment highlights (5-7 key selling points)
-- Financial summary — headline revenue, EBITDA, growth, margins
-- Transaction overview — what's being sold, indicative timeline
+- Financial summary - headline revenue, EBITDA, growth, margins
+- Transaction overview - what's being sold, indicative timeline
 
 **II. Company Overview** (3-5 pages)
 - History and founding story
@@ -66,7 +66,7 @@ Standard CIM table of contents:
 
 **VII. Financial Overview** (5-8 pages)
 - Historical income statement (3-5 years)
-- Revenue analysis — by segment, geography, customer type
+- Revenue analysis - by segment, geography, customer type
 - EBITDA bridge and margin analysis
 - Balance sheet overview
 - Cash flow summary
@@ -83,10 +83,10 @@ Standard CIM table of contents:
 ### Step 3: Drafting Guidelines
 
 - **Tone**: Professional, factual, compelling but not hyperbolic
-- **Narrative**: Tell a story — why this business is attractive, defensible, and positioned for growth
+- **Narrative**: Tell a story - why this business is attractive, defensible, and positioned for growth
 - **Data-driven**: Support every claim with data. "Strong growth" → "Revenue grew at a 15% CAGR from 2021-2024"
 - **Visuals**: Charts and graphs for financial trends, market size, competitive positioning
-- **Length**: 40-60 pages total — enough detail to inform first-round bids, not so long buyers won't read it
+- **Length**: 40-60 pages total - enough detail to inform first-round bids, not so long buyers won't read it
 - **Confidentiality**: Include a disclaimer page. Anonymize sensitive customer data unless seller approves
 
 ### Step 4: Output
@@ -97,9 +97,9 @@ Standard CIM table of contents:
 
 ## Important Notes
 
-- The CIM is a sales document — lead with strengths, but don't hide material issues (buyers will find them in diligence)
+- The CIM is a sales document - lead with strengths, but don't hide material issues (buyers will find them in diligence)
 - Investment highlights should address the 3 things every buyer cares about: growth potential, margin profile, and defensibility
 - Financial normalization / pro forma adjustments should be clearly labeled and explained
 - Work with legal on the confidentiality disclaimer and any regulatory disclosures
 - Get management to review for factual accuracy before distribution
-- The CIM sets expectations on valuation — make sure the narrative supports the asking price
+- The CIM sets expectations on valuation - make sure the narrative supports the asking price

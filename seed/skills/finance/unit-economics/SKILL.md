@@ -1,6 +1,6 @@
 ---
 name: unit-economics
-description: Analyze unit economics for PE targets — ARR cohorts, LTV/CAC, net retention, payback periods, revenue quality, and margin waterfall. Essential for software/SaaS, recurring revenue, and subscription businesses. Use when evaluating revenue quality, building a cohort analysis, or assessing customer economics. Triggers on "unit economics", "cohort analysis", "ARR analysis", "LTV CAC", "net retention", "revenue quality", or "customer economics".
+description: Analyze unit economics for PE targets - ARR cohorts, LTV/CAC, net retention, payback periods, revenue quality, and margin waterfall. Essential for software/SaaS, recurring revenue, and subscription businesses. Use when evaluating revenue quality, building a cohort analysis, or assessing customer economics. Triggers on "unit economics", "cohort analysis", "ARR analysis", "LTV CAC", "net retention", "revenue quality", or "customer economics".
 ---
 
 # Unit Economics Analysis
@@ -19,7 +19,7 @@ Determine the revenue model to tailor the analysis:
 
 #### ARR / Revenue Quality
 - **ARR bridge**: Beginning ARR → New → Expansion → Contraction → Churn → Ending ARR
-- **ARR by cohort**: Vintage analysis — how does each annual cohort retain and grow?
+- **ARR by cohort**: Vintage analysis - how does each annual cohort retain and grow?
 - **Revenue concentration**: Top 10/20/50 customers as % of total
 - **Revenue by type**: Recurring vs. non-recurring vs. professional services
 - **Contract structure**: ACV distribution, multi-year %, auto-renewal %
@@ -87,9 +87,9 @@ Synthesize into a revenue quality assessment:
 
 ## Important Notes
 
-- Always ask for raw customer-level data if available — aggregate metrics can hide problems
-- NDR above 100% can mask high gross churn if expansion is strong enough — always show both
-- Cohort analysis is the single most important view for revenue quality — push for this data
+- Always ask for raw customer-level data if available - aggregate metrics can hide problems
+- NDR above 100% can mask high gross churn if expansion is strong enough - always show both
+- Cohort analysis is the single most important view for revenue quality - push for this data
 - Differentiate between contracted ARR and actual recognized revenue
 - For usage-based models, focus on consumption trends and expansion patterns rather than traditional ARR metrics
-- Professional services revenue should be evaluated separately — it's not recurring and margins are typically lower
+- Professional services revenue should be evaluated separately - it's not recurring and margins are typically lower

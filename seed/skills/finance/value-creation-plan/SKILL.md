@@ -70,7 +70,7 @@ Prioritize the first 100 days post-close:
 
 **Days 1-30: Stabilize & Assess**
 - Management alignment and retention (sign employment agreements, set comp)
-- Quick wins — pricing, obvious cost cuts, low-hanging fruit
+- Quick wins - pricing, obvious cost cuts, low-hanging fruit
 - Detailed operational assessment by function
 - Customer communication plan
 - Set up reporting and KPI dashboards
@@ -115,9 +115,9 @@ Define the metrics that will track value creation:
 
 ## Important Notes
 
-- Be realistic about timing — most PE value creation takes 12-24 months to show in financials
+- Be realistic about timing - most PE value creation takes 12-24 months to show in financials
 - Quick wins matter for momentum and credibility, but don't over-rotate on cost cuts at the expense of growth
-- Management buy-in is critical — co-develop the plan, don't impose it
-- Track initiative-level P&L impact, not just top-line EBITDA — you need to know what's working
-- Add-on M&A is often the largest value creation lever — start the pipeline on Day 1
+- Management buy-in is critical - co-develop the plan, don't impose it
+- Track initiative-level P&L impact, not just top-line EBITDA - you need to know what's working
+- Add-on M&A is often the largest value creation lever - start the pipeline on Day 1
 - Always pressure-test assumptions with operating partners or industry experts

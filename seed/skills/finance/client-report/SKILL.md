@@ -93,7 +93,7 @@ Brief market summary tailored to the client's level of sophistication:
 
 - Performance must be calculated net of fees unless client/compliance requires gross
 - Always include appropriate disclaimers and disclosures (past performance, risk factors)
-- Reports should be consistent across clients — use a standard template
-- Match the level of detail to the client — some want every holding, others want a one-page summary
-- Benchmark selection matters — use the benchmark from the IPS, not whatever looks best
+- Reports should be consistent across clients - use a standard template
+- Match the level of detail to the client - some want every holding, others want a one-page summary
+- Benchmark selection matters - use the benchmark from the IPS, not whatever looks best
 - Review for compliance approval before first distribution of a new template

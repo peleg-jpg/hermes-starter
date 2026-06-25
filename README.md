@@ -62,6 +62,22 @@ nano ~/homelab/finbrain/data/SOUL.md  # give the brain its real role + voice
 opens chat. `finbrain setup`, `finbrain gateway run`, etc. all pass through to
 the in-container `hermes` CLI.
 
+The first-run wizard only marks itself done if it actually succeeds, so a
+cancelled or failed setup re-prompts next launch. To redo it on purpose:
+`rm ~/homelab/finbrain/data/.configured && finbrain`.
+
+Two capabilities ship **off** and need one opt-in step each:
+
+- **Model failover (429 protection):** the brain ships with no fallback chain, so
+  the first time the primary codex provider hits its cap it stalls. Add
+  `OPENROUTER_API_KEY` to `.env` and uncomment `fallback_providers` in
+  `data/config.yaml` (a paid model like `z-ai/glm-5.2` first). See
+  [docs/LESSONS.md](docs/LESSONS.md), section 10.
+- **Phone calls:** copy `data/bin/call.py.template` to `data/bin/call.py`, fill
+  `PHONE_NUMBER_ID` / `DEFAULT_ASSISTANT`, set `VAPI_API_KEY` in `.env`, and
+  uncomment the call rule in `data/SOUL.md` so the brain stops saying it can't
+  call. See [docs/LESSONS.md](docs/LESSONS.md), section 7.
+
 ## Linking WhatsApp
 
 The runtime is `hermes-wa` - WhatsApp is a first-class channel. Link it like
@@ -131,6 +147,11 @@ lib/bootstrap-vps.sh            swap + docker + ufw
 lib/build-image.sh             clone pinned hermes-agent source, docker build
 lib/new-brain.sh               scaffold + seed + start ONE brain
 lib/whatsapp-link.sh           link WhatsApp the right way (live QR, real TTY)
+lib/patch-gateway.sh           apply the two WhatsApp gateway noise patches
+lib/check-patches.sh           verify (or --heal) the gateway patches are present
+docs/LESSONS.md                the reliability runbook (read before first deploy)
+seed/bin/make_deck.py          deterministic HTML deck builder (presentations)
+seed/bin/call.py.template      Vapi outbound-call helper template (fill IDs)
 templates/config.template.yaml the brain config (env-driven, no secrets)
 templates/docker-compose.template.yml
 templates/env.example          provider keys, APIFY_TOKEN, messaging tokens
@@ -150,6 +171,31 @@ VERSION                         pinned image SHA + capture metadata
   `<brain>` first-run wizard, or edit `data/config.yaml`.
 - Transcription needs `OPENAI_API_KEY` even if your main model is something
   else (whisper-1 runs on OpenAI).
+
+## Reliability and operations
+
+A long real-world deploy surfaced about a dozen classes of bugs. The fixes are
+baked into this repo (config defaults, the gateway patch, the SOUL rules, the
+helper scripts), and the full backstory plus every symptom-to-fix mapping lives
+in **[docs/LESSONS.md](docs/LESSONS.md)** - read it once before your first
+deploy. The operational rules that bite hardest:
+
+- Restart a brain with `<brain> gateway restart` (clean reload), NOT
+  `docker restart`. A `docker restart` mid-task can leave the gateway hung (no
+  whatsapp-bridge, dead port 3000, frozen log); recover with `gateway restart`.
+- The gateway noise patches under `/opt/hermes` survive `docker restart` but NOT
+  a container recreate or image rebuild. Re-run `./lib/patch-gateway.sh <brain>`
+  after any recreate, new image, or re-scaffold. (`new-brain.sh` runs it for you
+  on a fresh brain.) To detect a wipe instead of remembering, run
+  `./lib/check-patches.sh <brain>` (exits non-zero if a patch is gone) or
+  `./lib/check-patches.sh <brain> --heal` to re-apply automatically -
+  `whatsapp-link.sh` runs the check for you before every relink, and the line is
+  crontab-ready for a daily self-heal.
+- Never set `model.provider: openrouter` as the PRIMARY model - it crash-loops
+  the gateway. OpenRouter belongs only in `fallback_providers` (a paid model
+  like `z-ai/glm-5.2` first).
+- Presentations are HTML via `seed/bin/make_deck.py`, never PPTX. To enable
+  phone calls, copy `seed/bin/call.py.template` to `call.py` and fill the IDs.
 
 ## Updating the seed
 

@@ -36,7 +36,7 @@ Direct XML editing can corrupt PowerPoint files if not done carefully:
 - Invalid XML or missing relationships can corrupt the entire file
 - Shape IDs must be unique across each slide
 
-**Always work on a backup copy** — never edit the original file directly.
+**Always work on a backup copy** - never edit the original file directly.
 
 ---
 
@@ -69,7 +69,7 @@ for shape in slide.shapes:
 - Cell borders are consistent
 - Selecting the table selects all cells as a unit
 
-**Failure indicators — you have created TEXT, not a table:**
+**Failure indicators - you have created TEXT, not a table:**
 - `|` characters visible between values
 - Columns misalign when content length varies
 - Tab characters (`\t`) used for spacing

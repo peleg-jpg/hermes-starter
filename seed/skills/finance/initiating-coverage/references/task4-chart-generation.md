@@ -906,7 +906,7 @@ Create a zip file containing all chart files and the chart index:
 
 **Example**: `Tesla_Charts_2024-10-28.zip`
 
-**Why this matters**: Task 5 will embed ALL charts created (25-35) throughout the report. The report requires visual density (1 chart per 200-300 words), so all charts serve a purpose—either for specific analytical sections or for visual storytelling and page density.
+**Why this matters**: Task 5 will embed ALL charts created (25-35) throughout the report. The report requires visual density (1 chart per 200-300 words), so all charts serve a purpose - either for specific analytical sections or for visual storytelling and page density.
 - Verify all 25-35 charts are present
 - Extract charts for Task 5 (Report Assembly)
 

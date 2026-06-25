@@ -5,18 +5,18 @@ description: Audit a spreadsheet for formula accuracy, errors, and common mistak
 
 # Audit Spreadsheet
 
-Audit formulas and data for accuracy and mistakes. Scope determines depth — from quick formula checks on a selection up to full financial-model integrity audits.
+Audit formulas and data for accuracy and mistakes. Scope determines depth - from quick formula checks on a selection up to full financial-model integrity audits.
 
 ## Step 1: Determine scope
 
 If the user already gave a scope, use it. Otherwise **ask them**:
 
 > What scope do you want me to audit?
-> - **selection** — just the currently selected range
-> - **sheet** — the current active sheet only
-> - **model** — the whole workbook, including financial-model integrity checks (BS balance, cash tie-out, roll-forwards, logic sanity)
+> - **selection** - just the currently selected range
+> - **sheet** - the current active sheet only
+> - **model** - the whole workbook, including financial-model integrity checks (BS balance, cash tie-out, roll-forwards, logic sanity)
 
-The **model** scope is the deepest — use it for DCF, LBO, 3-statement, merger, comps, or any integrated financial model before sending to a client or IC.
+The **model** scope is the deepest - use it for DCF, LBO, 3-statement, merger, comps, or any integrated financial model before sending to a client or IC.
 
 ---
 
@@ -27,7 +27,7 @@ Run these regardless of scope:
 | Check | What to look for |
 |---|---|
 | Formula errors | `#REF!`, `#VALUE!`, `#N/A`, `#DIV/0!`, `#NAME?` |
-| Hardcodes inside formulas | `=A1*1.05` — the `1.05` should be a cell reference |
+| Hardcodes inside formulas | `=A1*1.05` - the `1.05` should be a cell reference |
 | Inconsistent formulas | A formula that breaks the pattern of its neighbors in a row/column |
 | Off-by-one ranges | `SUM`/`AVERAGE` that misses the first or last row |
 | Pasted-over formulas | Cell that looks like a formula but is actually a hardcoded value |
@@ -47,7 +47,7 @@ If scope is **model**, identify the model type (DCF / LBO / 3-statement / merger
 | Check | What to look for |
 |---|---|
 | Input/formula separation | Are inputs clearly separated from calculations? |
-| Color convention | Blue=input, black=formula, green=link — or whatever the model uses, applied consistently? |
+| Color convention | Blue=input, black=formula, green=link - or whatever the model uses, applied consistently? |
 | Tab flow | Logical order (Assumptions → IS → BS → CF → Valuation)? |
 | Date headers | Consistent across all tabs? |
 | Units | Consistent (thousands vs millions vs actuals)? |
@@ -60,7 +60,7 @@ If scope is **model**, identify the model type (DCF / LBO / 3-statement / merger
 | RE rollforward | Prior RE + Net Income − Dividends = Current RE |
 | Goodwill/intangibles | Flow from acquisition assumptions (if M&A) |
 
-If BS doesn't balance, **quantify the gap per period and trace where it breaks** — nothing else matters until this is fixed.
+If BS doesn't balance, **quantify the gap per period and trace where it breaks** - nothing else matters until this is fixed.
 
 ### 3c. Cash Flow Statement
 
@@ -136,21 +136,21 @@ Output a findings table:
 |---|---|---|---|---|---|---|
 
 **Severity:**
-- **Critical** — wrong output (BS doesn't balance, formula broken, cash doesn't tie)
-- **Warning** — risky (hardcodes, inconsistent formulas, edge-case failures)
-- **Info** — style/best-practice (color coding, layout, naming)
+- **Critical** - wrong output (BS doesn't balance, formula broken, cash doesn't tie)
+- **Warning** - risky (hardcodes, inconsistent formulas, edge-case failures)
+- **Info** - style/best-practice (color coding, layout, naming)
 
 For **model** scope, prepend a summary line:
 
-> Model type: [DCF/LBO/3-stmt/...] — Overall: [Clean / Minor Issues / Major Issues] — [N] critical, [N] warnings, [N] info
+> Model type: [DCF/LBO/3-stmt/...] - Overall: [Clean / Minor Issues / Major Issues] - [N] critical, [N] warnings, [N] info
 
-**Don't change anything without asking** — report first, fix on request.
+**Don't change anything without asking** - report first, fix on request.
 
 ---
 
 ## Notes
 
-- **BS balance first** — if it doesn't balance, everything downstream is suspect
-- **Hardcoded overrides are the #1 source of silent bugs** — search aggressively
+- **BS balance first** - if it doesn't balance, everything downstream is suspect
+- **Hardcoded overrides are the #1 source of silent bugs** - search aggressively
 - **Sign convention errors** (positive vs negative for cash outflows) are extremely common
 - If the model uses VBA macros, note any macro-driven calculations that can't be audited from formulas alone

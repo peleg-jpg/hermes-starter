@@ -1,6 +1,6 @@
 ---
 name: model-update
-description: Update financial models with new data — quarterly earnings, management guidance, macro changes, or revised assumptions. Adjusts estimates, recalculates valuation, and flags material changes. Use after earnings, guidance updates, or when assumptions need refreshing. Triggers on "update model", "plug earnings", "refresh estimates", "update numbers for [company]", "new guidance", or "revise estimates".
+description: Update financial models with new data - quarterly earnings, management guidance, macro changes, or revised assumptions. Adjusts estimates, recalculates valuation, and flags material changes. Use after earnings, guidance updates, or when assumptions need refreshing. Triggers on "update model", "plug earnings", "refresh estimates", "update numbers for [company]", "new guidance", or "revise estimates".
 ---
 
 # Model Update
@@ -89,7 +89,7 @@ Recalculate valuation with updated estimates:
 
 - Always reconcile your estimates to the company's reported figures before projecting forward
 - Note any non-recurring items and whether your estimates are GAAP or adjusted
-- Track your estimate revision history — it shows your analytical progression
+- Track your estimate revision history - it shows your analytical progression
 - If the quarter was noisy, separate signal from noise in your estimate changes
-- Check consensus after updating — how do your revised estimates compare to the Street?
-- Share count matters — dilution from stock comp, converts, or buybacks can materially affect EPS
+- Check consensus after updating - how do your revised estimates compare to the Street?
+- Share count matters - dilution from stock comp, converts, or buybacks can materially affect EPS

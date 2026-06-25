@@ -97,11 +97,11 @@ After 30+ days, optionally:
 
 ## Important Notes
 
-- Wash sale rules are strict — violations disallow the loss AND adjust cost basis
-- Substantially identical means same security, not same asset class — ETFs tracking different indexes are generally fine
+- Wash sale rules are strict - violations disallow the loss AND adjust cost basis
+- Substantially identical means same security, not same asset class - ETFs tracking different indexes are generally fine
 - Always coordinate across all household accounts including retirement accounts
-- Consider the long-term cost basis step-down — harvesting resets cost basis, which means more gains later
+- Consider the long-term cost basis step-down - harvesting resets cost basis, which means more gains later
 - Year-end is prime harvesting season but opportunities exist throughout the year
 - Mutual fund capital gains distributions in December can create additional harvesting urgency
 - Document everything for tax reporting and compliance
-- Not all losses are worth harvesting — transaction costs and tracking error have real costs
+- Not all losses are worth harvesting - transaction costs and tracking error have real costs

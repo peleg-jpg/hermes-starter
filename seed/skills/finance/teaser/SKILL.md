@@ -24,7 +24,7 @@ One page, professionally formatted:
 **Header**
 - Deal code name (e.g., "Project [Name]")
 - Sector descriptor (e.g., "Leading Specialty Industrial Services Platform")
-- "Confidential — For Discussion Purposes Only"
+- "Confidential - For Discussion Purposes Only"
 
 **Company Description** (2-3 sentences)
 - What the company does, without naming it
@@ -66,15 +66,15 @@ Ensure the teaser doesn't inadvertently identify the company:
 
 ### Step 4: Output
 
-- Word document (.docx) — one page, clean formatting
+- Word document (.docx) - one page, clean formatting
 - PDF version for distribution
 - Optional PowerPoint version (single slide)
 
 ## Important Notes
 
-- The teaser's job is to generate interest, not close a deal — keep it tight and compelling
-- Less is more — a good teaser makes buyers want to sign the NDA to learn more
-- Use aspirational but accurate language — "leading", "differentiated", "high-growth" are fine if true
+- The teaser's job is to generate interest, not close a deal - keep it tight and compelling
+- Less is more - a good teaser makes buyers want to sign the NDA to learn more
+- Use aspirational but accurate language - "leading", "differentiated", "high-growth" are fine if true
 - Include enough financial detail to qualify serious buyers but not so much that tire-kickers waste your time
 - Always have the client and legal review before distribution
-- Track who receives the teaser — it becomes the outreach log for the process
+- Track who receives the teaser - it becomes the outreach log for the process

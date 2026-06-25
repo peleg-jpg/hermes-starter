@@ -38,7 +38,7 @@ Flag positions exceeding the rebalancing band (typically ±3-5%).
 Generate trades to bring allocation back to target:
 
 **Tax-Aware Rebalancing Rules:**
-- Prefer rebalancing in tax-advantaged accounts (IRA, Roth) first — no tax consequences
+- Prefer rebalancing in tax-advantaged accounts (IRA, Roth) first - no tax consequences
 - In taxable accounts, avoid selling positions with large short-term gains
 - Harvest losses where possible while rebalancing
 - Watch for wash sale rules (30-day window) across all accounts
@@ -73,9 +73,9 @@ Optimize which assets are held in which account types:
 
 ## Important Notes
 
-- Don't rebalance for rebalancing's sake — small drift within bands is fine
-- Tax costs can outweigh rebalancing benefits in taxable accounts — calculate the breakeven
+- Don't rebalance for rebalancing's sake - small drift within bands is fine
+- Tax costs can outweigh rebalancing benefits in taxable accounts - calculate the breakeven
 - Consider pending cash flows (contributions, withdrawals, RMDs) before trading
 - Check for any client-specific restrictions (ESG, concentrated stock, lockups)
 - Document rationale for every trade for compliance records
-- Wash sale rules apply across accounts — coordinate trades across the household
+- Wash sale rules apply across accounts - coordinate trades across the household

@@ -60,7 +60,7 @@ Pitch Deck Progress:
 ```
 
 ### Phase 1: Data Extraction
-1. **Create backup** of original template before any modifications — copy to `[filename]_backup.pptx`. Direct XML editing or unexpected errors can corrupt files.
+1. **Create backup** of original template before any modifications - copy to `[filename]_backup.pptx`. Direct XML editing or unexpected errors can corrupt files.
 2. Identify all source materials (Excel, CSV, PDF reports, Word documents, databases, web sources)
 3. Extract relevant data points from each source
 4. Validate all numbers against original sources
@@ -68,14 +68,14 @@ Pitch Deck Progress:
 6. Note any calculations that need verification → see [`calculation-standards.md`](reference/calculation-standards.md) for formulas
 
 ### Phase 2: Content Mapping
-1. **Open and visually review the template** — understand its structure, style, and existing content before modifying
-2. Analyze template structure — identify all placeholder areas and content boxes
+1. **Open and visually review the template** - understand its structure, style, and existing content before modifying
+2. Analyze template structure - identify all placeholder areas and content boxes
 3. Map source data to corresponding template sections → see [`slide-templates.md`](reference/slide-templates.md) for mapping guidance
 4. Identify placeholder guidance boxes (colored instruction boxes from task creator)
 5. Note any data gaps or mismatches → see [`slide-templates.md`](reference/slide-templates.md#handling-data-template-mismatches) for resolution
 
 ### Phase 3: Template Population
-1. **Remove or reformat placeholder boxes** — colored instruction boxes show WHAT to create, not HOW to format. Delete them and create properly formatted content in their place. See [Critical Anti-Patterns](#critical-anti-patterns-never-do-these).
+1. **Remove or reformat placeholder boxes** - colored instruction boxes show WHAT to create, not HOW to format. Delete them and create properly formatted content in their place. See [Critical Anti-Patterns](#critical-anti-patterns-never-do-these).
 2. Populate each section with mapped content (focus on content first)
 3. **Then apply formatting** to match template style → see [`formatting-standards.md`](reference/formatting-standards.md)
 4. Create tables as actual table objects (NEVER use pipe/tab-separated text) → see [`xml-reference.md`](reference/xml-reference.md#table-implementation)
@@ -134,11 +134,11 @@ Run through the [Final Quality Checklist](#final-quality-checklist) before deliv
 | Excluded/Negative | × | Items outside scope, features absent |
 | Neutral list | • | General enumeration, commentary |
 | Numbered sequence | 1. 2. 3. | Process steps, rankings |
-| Sub-bullets | – | Secondary points under main bullets |
+| Sub-bullets | - | Secondary points under main bullets |
 
 ### Slide Hierarchy Levels (Typical)
 
-These are typical ranges—adjust based on template specifications:
+These are typical ranges - adjust based on template specifications:
 
 | Level | Examples | Typical Size | Style |
 |-------|----------|--------------|-------|
@@ -165,7 +165,7 @@ Boxes at the **same hierarchy level** MUST use identical font sizes:
 
 ### Rounding for Presentation
 
-These are **typical conventions** — adjust based on the magnitude of values and template style:
+These are **typical conventions** - adjust based on the magnitude of values and template style:
 
 | Value Type | Typical Rounding | Example |
 |------------|------------------|---------|
@@ -225,11 +225,11 @@ These failures occur when placeholder formatting is mistaken for output formatti
 
 **What happens:** Template has colored instruction boxes (yellow, orange, etc.) with guidance text. Model replaces the guidance text with actual data BUT KEEPS THE COLORED BOX.
 
-**Why it's wrong:** The colored box IS the placeholder. It tells you what content goes there. The output should have different formatting — typically dark text on white/light background, or properly styled shapes.
+**Why it's wrong:** The colored box IS the placeholder. It tells you what content goes there. The output should have different formatting - typically dark text on white/light background, or properly styled shapes.
 
 **Recognition test:** If your populated slide has large colored rectangles filled with data text, you have copied the placeholder format instead of replacing it.
 
-**Critical distinction — two types of "placeholders":**
+**Critical distinction - two types of "placeholders":**
 
 | Type | How to identify | What to do |
 |------|-----------------|------------|
@@ -256,7 +256,7 @@ If uncertain: check if the shape exists on an empty slide from the same template
 
 **Recognition test:** If your populated content has light/white text on bright colored backgrounds in body areas (not headers), you've inherited placeholder formatting.
 
-**Correct approach:** Apply production formatting — typically dark text (#000000 or #333333) on white or light backgrounds for body content. Headers and accent areas may use brand colors.
+**Correct approach:** Apply production formatting - typically dark text (#000000 or #333333) on white or light backgrounds for body content. Headers and accent areas may use brand colors.
 
 ### Summary: Placeholder vs. Production
 
@@ -278,16 +278,16 @@ For detailed explanations of the most critical failures, see [Critical Anti-Patt
 | Failure | Solution | Reference |
 |---------|----------|-----------|
 | Unstructured text dumps | Break into bullets (✓, ×, •) | [`formatting-standards.md`](reference/formatting-standards.md#bullet-point-structure) |
-| Pipe/tab-separated "tables" | Create actual table objects — text with separators is NOT a table | [`xml-reference.md`](reference/xml-reference.md#table-implementation) |
-| Poor text/background contrast | Audit every text element | — |
+| Pipe/tab-separated "tables" | Create actual table objects - text with separators is NOT a table | [`xml-reference.md`](reference/xml-reference.md#table-implementation) |
+| Poor text/background contrast | Audit every text element | - |
 | Tiny pasted charts | Resize to fill area, paste chart only | [`formatting-standards.md`](reference/formatting-standards.md#proper-sizing-workflow) |
-| Source data pasted with charts | Select only chart object before copy | — |
+| Source data pasted with charts | Select only chart object before copy | - |
 | Data dumped into placeholder boxes | Delete colored instruction boxes, create new properly formatted content | [Anti-Patterns](#critical-anti-patterns-never-do-these) |
 | Inconsistent bullets | Define style once, apply to all | [`formatting-standards.md`](reference/formatting-standards.md#bullet-consistency) |
 | Inconsistent fonts across boxes | Standardize same-level boxes | [`formatting-standards.md`](reference/formatting-standards.md#font-consistency) |
-| Content overflow | Set explicit box widths (footnotes: 32.5cm for 16:9, 24cm for 4:3) | — |
-| Missing logo | Use logo from task files; if not provided, flag to user | — |
-| Remaining `[brackets]` | Search and replace all placeholders | — |
+| Content overflow | Set explicit box widths (footnotes: 32.5cm for 16:9, 24cm for 4:3) | - |
+| Missing logo | Use logo from task files; if not provided, flag to user | - |
+| Remaining `[brackets]` | Search and replace all placeholders | - |
 | Text arrows (→, ⟹) | Use PowerPoint shape objects | [`xml-reference.md`](reference/xml-reference.md#arrow-shapes) |
 
 ---

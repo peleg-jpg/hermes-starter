@@ -82,9 +82,9 @@ Based on the review, suggest:
 
 ## Important Notes
 
-- Know your client before the meeting — review notes from last meeting
+- Know your client before the meeting - review notes from last meeting
 - Lead with what the client cares about, not what you want to talk about
-- If performance was bad, address it directly — don't hide or spin
+- If performance was bad, address it directly - don't hide or spin
 - Always end with clear action items and next steps with dates
 - Document the meeting notes and any changes to the IPS
 - Compliance: ensure all materials are compliant with firm policies and regulatory requirements

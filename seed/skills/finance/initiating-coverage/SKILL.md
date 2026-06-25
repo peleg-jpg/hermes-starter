@@ -85,11 +85,11 @@ Each task specifies exact deliverables. Do NOT create:
 **Why**: These extras waste context and are not part of the professional workflow.
 
 **What TO deliver**:
-- ✅ Task 1: Research document (.md) — **NOTHING ELSE**
-- ✅ Task 2: Financial model (.xlsx) — **NOTHING ELSE**
-- ✅ Task 3: Valuation analysis (.md) + Excel tabs added to Task 2 file — **NOTHING ELSE**
-- ✅ Task 4: Charts zip file (.zip) — **NOTHING ELSE**
-- ✅ Task 5: Final report (.docx) — **NOTHING ELSE**
+- ✅ Task 1: Research document (.md) - **NOTHING ELSE**
+- ✅ Task 2: Financial model (.xlsx) - **NOTHING ELSE**
+- ✅ Task 3: Valuation analysis (.md) + Excel tabs added to Task 2 file - **NOTHING ELSE**
+- ✅ Task 4: Charts zip file (.zip) - **NOTHING ELSE**
+- ✅ Task 5: Final report (.docx) - **NOTHING ELSE**
 
 **If a deliverable is not listed above, DO NOT CREATE IT.**
 
