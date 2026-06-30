@@ -74,6 +74,17 @@ echo "==> [$NAME] starting container"
 echo "==> [$NAME] fixing /opt/data ownership to hermes (1001:1001)"
 docker exec -u 0 "$NAME" chown -R hermes:hermes /opt/data
 
+# Same uid-mismatch class, different dir. The upstream image ships JS helper
+# dirs under /opt/hermes/scripts (e.g. whatsapp-bridge) owned by the build user
+# (uid 10000), but the runtime drops to hermes (1001). Those dirs lazily run
+# `npm install` into their own node_modules on first use - `<brain> whatsapp`
+# linking is the common trigger - which fails EACCES without write access.
+# Chown every scripts dir that has a package.json so first-run installs work.
+echo "==> [$NAME] fixing /opt/hermes/scripts npm-helper ownership (whatsapp-bridge etc.)"
+docker exec -u 0 "$NAME" sh -c \
+  'find /opt/hermes/scripts -maxdepth 2 -name package.json -printf "%h\0" | xargs -0 -r chown -R hermes:hermes' \
+  || echo "    (no npm-helper dirs to fix, or chown skipped)"
+
 cat <<EOF
 
 ==========================================
