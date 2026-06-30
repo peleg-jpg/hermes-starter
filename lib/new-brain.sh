@@ -52,16 +52,31 @@ cat > "$WRAPPER" <<EOF
 set -euo pipefail
 CONTAINER=$NAME
 COMPOSE_DIR=$DIR
+# Run a command in the brain, attaching a TTY only when we have one
+# (interactive wizards / the WhatsApp QR need -it; pipes and cron need -i).
+dx() { if [ -t 0 ] && [ -t 1 ]; then docker exec -it "\$CONTAINER" "\$@"; else docker exec -i "\$CONTAINER" "\$@"; fi; }
 if ! docker ps --format '{{.Names}}' | grep -qx "\$CONTAINER"; then
   (cd "\$COMPOSE_DIR" && docker compose up -d) >&2
 fi
 if ! docker exec "\$CONTAINER" test -f /opt/data/.configured; then
   echo "[$NAME] first run: launching 'hermes setup' (provider + key + model)..." >&2
-  if [ -t 0 ] && [ -t 1 ]; then docker exec -it "\$CONTAINER" hermes setup; else docker exec -i "\$CONTAINER" hermes setup; fi
+  dx hermes setup
   docker exec "\$CONTAINER" touch /opt/data/.configured
 fi
+# WhatsApp: after pairing the bot still won't reply unless the gateway is
+# running. The gateway ships "down" and 'hermes whatsapp' does not start it,
+# so run the link, then bring the gateway online. stop+start works whether it
+# was up or down and reconnects the freshly-linked session.
+if [ "\${1:-}" = whatsapp ]; then
+  dx hermes whatsapp
+  echo "[$NAME] bringing the gateway online so the bot replies..." >&2
+  docker exec "\$CONTAINER" hermes gateway stop  >/dev/null 2>&1 || true
+  docker exec "\$CONTAINER" hermes gateway start >/dev/null 2>&1 || true
+  docker exec "\$CONTAINER" hermes gateway status 2>&1 | head -2
+  exit 0
+fi
 [ \$# -eq 0 ] && set -- chat
-if [ -t 0 ] && [ -t 1 ]; then exec docker exec -it "\$CONTAINER" hermes "\$@"; else exec docker exec -i "\$CONTAINER" hermes "\$@"; fi
+dx hermes "\$@"
 EOF
 chmod +x "$WRAPPER"
 
